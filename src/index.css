@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  font-family: 'League Spartan', sans-serif;
+  font-size: 15px;
+}
+
+
+.header{
+  min-height: 20vh;
+  background-image: url('/images/bg-header-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filters{
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translate(50% , 50%);
+}
+
+@media(min-width:680px){
+  .header{
+    min-height: 25vh;
+    background-image: url('/images/bg-header-desktop.svg');
+  }
+}
+@media(min-width:768px){
+  .card{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(min-width:1280px){
+  .card{
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+  }
+}
